@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación: Estrategias de Ventas - Un Enfoque en el Consumidor</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Poppins:wght@600;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .slideshow-container {
+            position: relative;
+            background: #ffffff;
+            width: 95%;
+            max-width: 1100px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+
+        .mySlides {
+            display: none;
+            padding: 50px 80px;
+            text-align: left;
+            min-height: 600px;
+            flex-direction: column;
+            justify-content: center;
+            animation: fadeIn 0.8s;
+        }
+        
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #1a237e; /* Dark Blue */
+        }
+        
+        h1 { font-size: 2.4em; text-align: center; border: none; }
+        h2 { font-size: 2em; border-bottom: 3px solid #3f51b5; /* Indigo */ padding-bottom: 10px; margin-bottom: 25px; }
+        h3 { font-size: 1.5em; color: #303f9f; border-bottom: none; margin-bottom: 10px;}
+
+        p, li { font-size: 1.1em; line-height: 1.7; color: #37474f; }
+        
+        .title-page-info p { text-align: center; margin: 8px 0; color: #546e7a; }
+        .title-page-info strong { color: #1a237e; }
+
+        ul { list-style-type: none; padding-left: 0; }
+        li::before {
+            content: '✓';
+            color: #3f51b5;
+            font-weight: bold;
+            display: inline-block;
+            width: 1.2em;
+            margin-left: -1.2em;
+        }
+        li { padding-left: 1.5em; margin-bottom: 15px; }
+        
+        blockquote {
+            background-color: #e8eaf6;
+            border-left: 5px solid #3f51b5;
+            margin: 25px 0;
+            padding: 15px 25px;
+            font-style: italic;
+            font-size: 1.1em;
+            color: #1a237e;
+        }
+        
+        .prev, .next {
+            cursor: pointer; position: absolute; top: 50%; width: auto; padding: 16px;
+            margin-top: -22px; color: white; font-weight: bold; font-size: 20px;
+            transition: 0.6s ease; border-radius: 0 3px 3px 0; user-select: none;
+            background-color: rgba(63, 81, 181, 0.7);
+        }
+        .next { right: 0; border-radius: 3px 0 0 3px; }
+        .prev:hover, .next:hover { background-color: rgba(26, 35, 126, 1); }
+
+        .numbertext {
+            color: #90a4ae; font-size: 12px; padding: 8px 12px;
+            position: absolute; top: 15px; left: 15px;
+        }
+        
+        .grid-container {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px; margin-top: 25px;
+        }
+        .grid-item {
+            background-color: #f9f9ff; border: 1px solid #c5cae9; padding: 20px;
+            border-radius: 8px; transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .grid-item:hover { transform: translateY(-5px); box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+
+        .journey-container { display: flex; justify-content: space-between; margin-top: 40px; position: relative; }
+        .journey-step { text-align: center; width: 18%; position: relative; }
+        .journey-icon { font-size: 3em; color: #3f51b5; margin-bottom: 10px; }
+        .journey-title { font-weight: bold; font-family: 'Poppins'; color: #1a237e; }
+        .journey-container::before {
+            content: ''; position: absolute; top: 50%; left: 10%; right: 10%; transform: translateY(-20px);
+            height: 4px; background-color: #c5cae9; z-index: -1;
+        }
+        
+        .funnel { margin: 30px auto; width: 80%; }
+        .funnel-stage {
+            position: relative; padding: 15px 30px; margin: 0 auto 5px; background: linear-gradient(135deg, #7986cb, #3f51b5);
+            color: white; border-radius: 5px; text-align: center; transition: all 0.3s;
+        }
+        .funnel-stage p {color: white; margin: 5px 0;}
+        .funnel-s1 { width: 100%; } .funnel-s2 { width: 90%; }
+        .funnel-s3 { width: 80%; } .funnel-s4 { width: 70%; } .funnel-s5 { width: 60%; }
+
+    </style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+    <!-- Slide 1: Title -->
+    <div class="mySlides" style="display: flex;">
+        <div class="slide-content">
+            <div class="numbertext">1 / 17</div>
+            <img src="https://i.imgur.com/x07K3sN.png" alt="Logo USS" style="display:block; margin: 0 auto 20px; max-width:400px;">
+            <div class="title-page-info">
+                <p><strong>FACULTAD DE CIENCIAS EMPRESARIALES</strong></p>
+                <p><strong>ESCUELA PROFESIONAL DE CONTABILIDAD Y FINANZAS</strong></p>
+            </div>
+            <h1 style="margin-top: 30px;">ESTRATEGIAS DE VENTAS</h1>
+            <div class="title-page-info" style="margin-top: 30px;">
+                <p><strong>CURSO:</strong> MICROECONOMIA</p>
+                <p><strong>DOCENTE:</strong> MARIA ROSA CRUZADO PUENTE</p>
+                <p><strong>AUTOR:</strong> NOVOA VILCHEZ JORGE LUIS</p>
+                <p><strong>AÑO 2025 - CICLO II</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 2: Introducción -->
+    <div class="mySlides">
+        <div class="slide-content">
+            <div class="numbertext">2 / 17</div>
+            <h2>1. Introducción: El Nuevo Paradigma</h2>
+            <p>En el mercado actual, la hipercompetencia y la digitalización han provocado un cambio fundamental:</p>
+            <blockquote>El poder ha migrado de las empresas al consumidor. Ya no basta con tener un buen producto; es imperativo entender profundamente al cliente.</blockquote>
+            <h3>Objetivo Central de este Trabajo:</h3>
+            <ul>
+                <li><strong>Entender por qué la gente compra:</strong> Analizar los factores y el proceso mental detrás de cada decisión.</li>
+                <li><strong>Crear estrategias que funcionen:</strong> Usar ese conocimiento para construir acciones de venta prácticas, reales y efectivas en cada etapa del camino del cliente.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Slide 3: Marco ODS -->
+    <div class="mySlides">
+        <div class="slide-content">
+            <div class="numbertext">3 / 17</div>
+            <h2>Un Enfoque Sostenible: Alineación con ODS 4</h2>
+            <p>Esta monografía se alinea con el <strong>ODS 4: Educación de Calidad</strong>, al preparar profesionales con competencias que integran la teoría y la práctica.</p>
+            <blockquote>El objetivo no es solo exponer modelos teóricos sobre el consumidor, sino demostrar su aplicación tangible en el mundo real.</blockquote>
+            <p>Este enfoque dual dota al futuro profesional de la capacidad para:</p>
+            <ul>
+                <li><strong>Analizar</strong> el comportamiento del mercado.</li>
+                <li><strong>Diagnosticar</strong> las necesidades y dolores del cliente.</li>
+                <li><strong>Ejecutar</strong> estrategias que generen resultados reales.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 4: Fundamentos -->
+    <div class="mySlides">
+        <div class="slide-content">
+            <div class="numbertext">4 / 17</div>
+            <h2>2. Fundamentos del Comportamiento del Consumidor</h2>
+            <p>Se define como el análisis de todo el camino que recorre una persona al adquirir algo, desde que lo piensa hasta que lo desecha. Este proceso está impulsado por una combinación de influencias.</p>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3>🌍 Factores Externos</h3>
+                    <p>Aquellos que nacen del mundo que rodea al individuo. Moldean sus deseos y elecciones desde fuera.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>🧠 Factores Internos</h3>
+                    <p>Aquellos que forman parte de quién es la persona. Son los procesos mentales y características personales que guían sus decisiones.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5: Factores Externos -->
+    <div class="mySlides">
+        <div class="slide-content">
+            <div class="numbertext">5 / 17</div>
+            <h2>2.1. Las Influencias Externas 🌍</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3>🏛️ Factor Cultural</h3>
+                    <p>Es el moldeador principal. El conjunto de creencias, valores y costumbres de una sociedad. Una estrategia de venta debe ser sensible al contexto local para no fracasar.</p>
+                    <ul>
+                        <li>Cultura, Subcultura y Clase Social</li>
+                    </ul>
+                </div>
+                <div class="grid-item">
+                    <h3>👨‍👩‍👧‍👦 Factor Social</h3>
+                    <p>Nuestras elecciones están moldeadas por nuestros grupos de referencia. La "prueba social" (ver que otros usan un producto) es un motor de ventas extremadamente poderoso.</p>
+                    <ul>
+                        <li>Familia, Amigos, Colegas, Roles, Influencers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Slide 6: Factores Internos -->
+    <div class="mySlides">
+        <div class="slide-content">
+            <div class="numbertext">6 / 17</div>
+            <h2>2.2. Los Motores Internos 🧠</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3>👤 Factores Personales</h3>
+                    <p>Nuestra vida y situación personal influyen directamente en nuestras necesidades. Un joven soltero no necesita lo mismo que una familia con hijos.</p>
+                    <ul>
+                        <li>Edad y Etapa del Ciclo de Vida</li>
+                        <li>Ocupación e Ingresos</li>
+                        <li>Estilo de Vida y Personalidad</li>
+                    </ul>
+                </div>
+                <div class="grid-item">
+                    <h3>⚙️ Factores Psicológicos</h3>
+                    <p>Son los procesos en nuestra mente que nos empujan a comprar.</p>
+                    <ul>
+                        <li><strong>Motivación:</strong> El "porqué" profundo que nos mueve.</li>
+                        <li><strong>Percepción:</strong> Cómo interpretamos un anuncio o producto.</li>
+                        <li><strong>Aprendizaje:</strong> Basado en experiencias pasadas (buenas o malas).</li>
+                        <li><strong>Actitudes:</strong> El sentimiento previo (positivo o negativo) hacia una marca.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 7: El Viaje del Cliente -->
+    <div class="mySlides">
+        <div class="slide-content">
+            <div class="numbertext">7 / 17</div>
+            <h2>3. El Viaje de Decisión de Compra</h2>
+            <p>Antes de cualquier compra, todos seguimos un camino mental, a veces sin darnos cuenta. Entender estas etapas es clave.</p>
+            <div class="journey-container">
+                <div class="journey-step">
+                    <div class="journey-icon">💡</div>
+                    <div class="journey-title">1. Reconocimiento de la Necesidad</div>
+                </div>
+                <div class="journey-step">
+                    <div class="journey-icon">🔍</div>
+                    <div class="journey-title">2. Búsqueda de Información</div>
+                </div>
+                <div class="journey-step">
+                    <div class="journey-icon">⚖️</div>
+                    <div class="journey-title">3. Evaluación de Alternativas</div>
+                </div>
+                <div class="journey-step">
+                    <div class="journey-icon">🛒</div>
+                    <div class="journey-title">4. Decisión de Compra</div>
+                </div>
+                 <div class="journey-step">
+                    <div class="journey-icon">😊</div>
+                    <div class="journey-title">5. Comportamiento Post-Compra</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 8: Estrategias Etapa 1 -->
+    <div class="mySlides">
+        <div class="slide-content">
+            <div class="numbertext">8 / 17</div>
+            <h2>4.1. Estrategias para Despertar la Necesidad 💡</h2>
+            <blockquote>El objetivo: Hacer que el consumidor sea consciente de su problema o deseo. Es el punto de partida.</blockquote>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3>Marketing de Contenidos</h3>
+                    <p>Crear artículos de blog, videos o guías que aborden los "puntos de dolor" del cliente. Se trata de educar y ayudar, no de vender directamente.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Publicidad Dirigida</h3>
+                    <p>Utilizar anuncios que muestren un escenario de "antes y después". Visualizar el problema y la solución genera un fuerte impacto emocional y acelera el reconocimiento.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 9: Estrategias Etapa 2 -->
+    <div class="mySlides">
+        <div class="slide-content">
+            <div class="numbertext">9 / 17</div>
+            <h2>4.2. Estrategias para Ser la Mejor Opción Informativa 🔍</h2>
+            <blockquote>El objetivo: Estar presente y ser la fuente de información más útil y confiable cuando el cliente empieza a buscar soluciones.</blockquote>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3>SEO (Optimización para Motores de Búsqueda)</h3>
+                    <p>Asegurarse de que la empresa aparezca en los primeros resultados de Google. Si no te encuentran, no existes.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Testimonios y Reseñas</h3>
+                    <p>Promover activamente las opiniones de clientes satisfechos. La prueba social es el factor de confianza más importante en la era digital.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 10: Estrategias Etapa 3 -->
+    <div class="mySlides">
+        <div class="slide-content">
+            <div class="numbertext">10 / 17</div>
+            <h2>4.3. Estrategias para Destacar en la Evaluación ⚖️</h2>
+            <blockquote>El objetivo: Demostrar de manera convincente por qué nuestra solución es superior a la de la competencia.</blockquote>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3>Demostraciones y Muestras</h3>
+                    <p>Permitir que el cliente experimente el producto directamente. Reduce la incertidumbre y crea una conexión tangible.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Tablas Comparativas y Guías</h3>
+                    <p>Facilitar la comparación y destacar las ventajas competitivas de forma clara y honesta. Ahorra tiempo al cliente.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Argumentos Basados en el Valor</h3>
+                    <p>Entrenar al equipo para que no venda características, sino beneficios y soluciones a los problemas del cliente. ¿Cómo mejora su vida?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Slide 11: Estrategias Etapa 4 -->
+    <div class="mySlides">
+        <div class="slide-content">
+            <div class="numbertext">11 / 17</div>
+            <h2>4.4. Estrategias para Cerrar la Venta 🛒</h2>
+            <blockquote>El objetivo: Hacer que el acto de comprar sea lo más fácil, rápido y seguro posible. Eliminar toda fricción.</blockquote>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3>Ofertas por Tiempo Limitado</h3>
+                    <p>Crear un sentido de urgencia para evitar la procrastinación. Un pequeño empujón para tomar la decisión.</p>
+                </div>
+                 <div class="grid-item">
+                    <h3>Garantías de Satisfacción</h3>
+                    <p>Reducir el riesgo percibido ofreciendo políticas de devolución flexibles. "Si no te encanta, te devolvemos tu dinero."</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Proceso de Pago Sencillo y Seguro</h3>
+                    <p>Optimizar la experiencia de compra (online o física) para que sea rápida y sin complicaciones. Un mal proceso de pago es la causa #1 de carritos abandonados.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 12: Estrategias Etapa 5 -->
+    <div class="mySlides">
+        <div class="slide-content">
+            <div class="numbertext">12 / 17</div>
+            <h2>4.5. Estrategias para Después de la Compra 😊</h2>
+             <blockquote>El objetivo: Confirmar que el cliente tomó la decisión correcta, maximizar su satisfacción y convertirlo en un promotor de la marca.</blockquote>
+             <div class="grid-container">
+                <div class="grid-item">
+                    <h3>Comunicación Proactiva</h3>
+                    <p>Enviar un email de agradecimiento, tutoriales o consejos para sacar el máximo provecho al producto.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Programas de Lealtad</h3>
+                    <p>Recompensar a los clientes recurrentes. Es mucho más barato retener a un cliente que adquirir uno nuevo.</p>
+                </div>
+                 <div class="grid-item">
+                    <h3>Soporte al Cliente Excepcional</h3>
+                    <p>Resolver cualquier problema post-venta de manera rápida y empática. Una mala experiencia de soporte puede destruir la lealtad para siempre.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 13: Funnel de Ventas -->
+    <div class="mySlides">
+        <div class="slide-content">
+            <div class="numbertext">13 / 17</div>
+            <h2>Visión Integrada: El Embudo de Estrategias de Venta</h2>
+            <p>Cada etapa del viaje del consumidor se corresponde con una fase del embudo de ventas, guiando al cliente desde el primer contacto hasta la lealtad.</p>
+            <div class="funnel">
+                <div class="funnel-stage funnel-s1"><p><strong>1. Despertar Necesidad:</strong> Marketing de Contenidos, Publicidad</p></div>
+                <div class="funnel-stage funnel-s2"><p><strong>2. Búsqueda de Info:</strong> SEO, Testimonios</p></div>
+                <div class="funnel-stage funnel-s3"><p><strong>3. Evaluación:</strong> Demos, Guías, Venta de Valor</p></div>
+                <div class="funnel-stage funnel-s4"><p><strong>4. Compra:</strong> Ofertas, Garantías, Pago Fácil</p></div>
+                <div class="funnel-stage funnel-s5"><p><strong>5. Lealtad:</strong> Soporte, Programas de Fidelización</p></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 14: Conclusiones -->
+    <div class="mySlides">
+        <div class="slide-content">
+            <div class="numbertext">14 / 17</div>
+            <h2>5. Conclusiones Clave</h2>
+            <ul>
+                <li>El estudio del comportamiento del consumidor ya no es una opción, sino una <strong>necesidad estratégica</strong> para lograr ventas sostenibles.</li>
+                <li>Una venta exitosa no es un evento aislado, sino un <strong>proceso</strong> que guía al cliente en cada etapa de su viaje con estrategias específicas.</li>
+                <li>Conocer los modelos teóricos es importante, pero la verdadera habilidad de un profesional es <strong>identificar en qué momento se encuentra un cliente</strong> y aplicar la estrategia adecuada.</li>
+                <li>La combinación de <strong>psicología del consumidor y acción comercial</strong> es fundamental para formar relaciones sólidas, dar valor real y garantizar la viabilidad en un mercado cambiante.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Slide 15: Conclusión Visual -->
+    <div class="mySlides" style="text-align:center;">
+        <div class="slide-content">
+            <div class="numbertext">15 / 17</div>
+            <h2 style="font-size:2.5em">De la Teoría al Triunfo en Ventas</h2>
+            <div class="journey-container" style="align-items: center;">
+                 <div class="journey-step">
+                    <div class="journey-icon">🧠</div>
+                    <div class="journey-title">ENTENDER</div>
+                    <p>La psicología del consumidor</p>
+                </div>
+                 <div class="journey-step">
+                    <div style="font-size:3em; color: #3f51b5;">→</div>
+                </div>
+                 <div class="journey-step">
+                    <div class="journey-icon">🎯</div>
+                    <div class="journey-title">APLICAR</div>
+                    <p>La estrategia correcta en el momento justo</p>
+                </div>
+                 <div class="journey-step">
+                    <div style="font-size:3em; color: #3f51b5;">→</div>
+                </div>
+                 <div class="journey-step">
+                    <div class="journey-icon">📈</div>
+                    <div class="journey-title">LOGRAR</div>
+                    <p>Ventas sostenibles y clientes leales</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+     <!-- Slide 16: Bibliografía -->
+    <div class="mySlides">
+        <div class="slide-content">
+            <div class="numbertext">16 / 17</div>
+            <h2>6. Referencias Bibliográficas</h2>
+            <p>Este trabajo se fundamenta en las contribuciones de autores clave en el campo del marketing y el comportamiento del consumidor.</p>
+            <ul style="font-size: 1em;">
+                <li>Kotler, P., & Armstrong, G. (2018). <em>Marketing</em>. Pearson Educación.</li>
+                <li>Schiffman, L. G., & Wisenblit, J. L. (2015). <em>Comportamiento del consumidor</em>. Pearson Educación.</li>
+                <li>Solomon, M. R. (2013). <em>Comportamiento del consumidor</em>. Pearson Educación.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 17: Cierre -->
+    <div class="mySlides" style="text-align:center;">
+        <div class="slide-content">
+            <div class="numbertext">17 / 17</div>
+            <h1>Muchas Gracias</h1>
+            <p style="font-size:1.3em; margin-top:20px;">Abierto a preguntas y comentarios.</p>
+             <div class="title-page-info" style="margin-top: 50px;">
+                <p><strong>AUTOR: NOVOA VILCHEZ JORGE LUIS</strong></p>
+                <p><strong>CURSO: MICROECONOMIA</strong></p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+
+<script>
+    var slideIndex = 1;
+    var slides = document.getElementsByClassName("mySlides");
+    slides[slideIndex-1].style.display = "flex";
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "flex";
+    }
+    
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'ArrowRight') {
+            plusSlides(1);
+        } else if (event.key === 'ArrowLeft') {
+            plusSlides(-1);
+        }
+    });
+</script>
+
+</body>
+</html>
